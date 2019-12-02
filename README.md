@@ -2,20 +2,25 @@
 
 > Extract YAML front-matter from Markdown files to a single JSON file.
 
+## Credit:
+The credit goes to [Scott Stanfield](https://github.com/scottstanfield) for creating this module.
+
+## Original Readme
+
 The use case for this markdown-to-yaml-to-json task is somewhat narrow.
 I use it to strip the YAML front-matter off a set of blog posts written
 in Markdown. The metadata for each file is combined into a single
-object, then emitted as a JSON file. 
+object, then emitted as a JSON file.
 
-Along the way, a few extra fields are created for each article: 
+Along the way, a few extra fields are created for each article:
 
 - an ISO 8601 formatted date
 - a preview of the actual body content
 - the basename of the file, used as a key to get back to the metadata
 
 It wraps the
-[markdown-to-json](https://github.com/scottstanfield/markdown-to-json)
-npm module. 
+[markdown-to-json](https://github.com/Campus-Labs-Marketing/markdown-to-json.git)
+npm module.
 
 I realize a more descriptive name for this task would be
 `markdown-yaml-frontmatter-to-json` but that's pretty wordy. And you
@@ -122,7 +127,7 @@ the `preview` element. Trailing ellipses are added.
 
 #### options.files
 This is the common source / destination pairing you see in all Grunt
-tasks. Note that you have just one destination, one or more sources, per pair. 
+tasks. Note that you have just one destination, one or more sources, per pair.
 
 See the [docs](http://gruntjs.com/configuring-tasks#compact-format),
 specifically the Compact Format and Files Object Format for examples.
@@ -140,5 +145,3 @@ module `m2j`.
 > Scott Stanfield  
 > scott@vertigo.com  
 > April 2014  
-
-

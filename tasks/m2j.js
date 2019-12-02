@@ -12,16 +12,15 @@ module.exports = function(grunt) {
 
   var m2j = require('markdown-to-json');
 
-  grunt.registerMultiTask('m2j', 
+  grunt.registerMultiTask('m2j',
     'YAML from Markdown files --> to single JSON file', function() {
 
     var options = this.options({
-      minify: false,
-      width: 50
+      minify: true
     });
 
     grunt.verbose.writeflags(options, 'Options');
-    
+
     // Iterate over file groups and parse the markdown files
     this.files.forEach(function(f) {
       options.outfile = f.dest;
