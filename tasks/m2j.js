@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     'YAML from Markdown files --> to single JSON file', function() {
 
     var options = this.options({
-      minify: true
+      minify: false
     });
 
     grunt.verbose.writeflags(options, 'Options');
