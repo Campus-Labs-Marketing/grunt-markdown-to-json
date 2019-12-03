@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         m2j.parse(f.src, options);
         grunt.log.ok('Created ' + options.outfile);
       } catch (e) {
-        grunt.log.error();
+        grunt.log.error(e);
         grunt.verbose.error(e);
         grunt.fail.warn('markdown-to-json task failed.');
       }
